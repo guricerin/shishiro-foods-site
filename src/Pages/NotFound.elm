@@ -4,6 +4,7 @@ import Html exposing (..)
 import Spa.Document exposing (Document)
 import Spa.Page as Page exposing (Page)
 import Spa.Url exposing (Url)
+import Util.Title as T
 
 
 type alias Params =
@@ -31,7 +32,7 @@ page =
 
 view : Url Params -> Document Msg
 view { params } =
-    { title = "404"
+    { title = "404 | " ++ T.title
     , body =
         [ text "Not found"
         ]

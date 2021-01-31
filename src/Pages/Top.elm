@@ -1,9 +1,11 @@
 module Pages.Top exposing (Model, Msg, Params, page)
 
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Spa.Document exposing (Document)
 import Spa.Page as Page exposing (Page)
 import Spa.Url exposing (Url)
+import Util.Title as T
 
 
 type alias Params =
@@ -31,6 +33,7 @@ page =
 
 view : Url Params -> Document Msg
 view { params } =
-    { title = "Homepage"
-    , body = [ text "Homepage" ]
+    { title = T.title
+    , body =
+        [ div [] [ h2 [] [ text "ららーいおん" ] ] ]
     }

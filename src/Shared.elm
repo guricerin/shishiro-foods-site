@@ -10,7 +10,7 @@ module Shared exposing
 
 import Browser.Navigation exposing (Key)
 import Html exposing (..)
-import Html.Attributes exposing (class, href)
+import Html.Attributes exposing (..)
 import Spa.Document exposing (Document)
 import Spa.Generated.Route as Route
 import Url exposing (Url)
@@ -69,11 +69,27 @@ view { page, toMsg } model =
     { title = page.title
     , body =
         [ div [ class "layout" ]
-            [ header [ class "navbar" ]
-                [ a [ class "link", href (Route.toString Route.Top) ] [ text "Homepage" ]
-                , a [ class "link", href (Route.toString Route.NotFound) ] [ text "Not found" ]
-                ]
+            [ viewHeader
             , div [ class "page" ] page.body
+            , viewFooter
             ]
         ]
     }
+
+
+viewHeader : Html msg
+viewHeader =
+    header [ class "navbar" ]
+        [ a [ class "link", href (Route.toString Route.Top) ] [ text "Home" ]
+        , a [ class "link", href (Route.toString Route.About) ] [ text "About" ]
+        , a [ class "link", href (Route.toString Route.Service) ] [ text "Service" ]
+        , a [ class "link", href (Route.toString Route.Caution) ] [ text "Caution" ]
+        ]
+
+
+viewFooter : Html msg
+viewFooter =
+    footer [ id "footer" ]
+        [ a [ class "link", href "https://twitter.com/shishirobotan" ] [ text "Twitter" ]
+        , a [ class "link", href "https://www.youtube.com/channel/UCUKD-uaobj9jiqB-VXt71mA" ] [ text "Youtube" ]
+        ]
