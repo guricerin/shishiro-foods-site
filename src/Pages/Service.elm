@@ -34,5 +34,19 @@ type alias Params =
 view : Url Params -> Document Msg
 view { params } =
     { title = "SERVICE | " ++ T.title
-    , body = [ div [] [ h2 [] [ text "事業概要" ] ] ]
+    , body =
+        [ div []
+            [ h2 [] [ text "事業概要" ]
+            , div []
+                [ div []
+                    [ h3 [] [ text "麺屋ぼたん" ]
+                    , p [] [ text "当社ラーメン店ブランド「麺屋ぼたん」の店舗経営。" ]
+                    ]
+                , div []
+                    [ h3 [] [ text "施工事業" ]
+                    , p [] [ text "" ]
+                    ]
+                ]
+            ]
+        ]
     }

@@ -83,6 +83,7 @@ viewHeader =
         [ a [ class "link", href (Route.toString Route.Top) ] [ text "Home" ]
         , a [ class "link", href (Route.toString Route.About) ] [ text "About" ]
         , a [ class "link", href (Route.toString Route.Service) ] [ text "Service" ]
+        , a [ class "link", href (Route.toString Route.News__Top) ] [ text "News" ]
         , a [ class "link", href (Route.toString Route.Caution) ] [ text "Caution" ]
         ]
 
