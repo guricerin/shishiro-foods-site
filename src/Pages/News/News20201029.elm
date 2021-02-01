@@ -1,4 +1,4 @@
-module Pages.News.News20201201 exposing (Model, Msg, Params, page)
+module Pages.News.News20201029 exposing (Model, Msg, Params, page)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -76,14 +76,14 @@ subscriptions model =
 
 view : Model -> Document Msg
 view model =
-    { title = "2020-12-01 | " ++ T.title
+    { title = "2020-10-29 | " ++ T.title
     , body =
         [ div [] []
         , div []
-            [ p [] [ text "ホロ鯖5期生ハウス前にて、弊社代表の傭兵時代を模したスフィンクス「スナイパーぼたんくす」を建築しました。" ]
-            , p [] [ text "ししろフーズはホロ鯖内の秩序維持に努めて参ります。" ]
+            [ p [] [ text "ホロ鯖5期生ハウス（弊社代表の自宅）にて「麺屋ぼたん」をオープンしました。" ]
+            , p [] [ text "皆様の来店を心よりお待ちしております。" ]
             ]
         , div []
-            [ YT.toHtml "bvn319UGUNY" ]
+            [ YT.toHtml "XjQhvAn4y-k" ]
         ]
     }

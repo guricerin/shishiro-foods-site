@@ -37,7 +37,7 @@ view { params } =
     , body =
         [ div [] [ h2 [] [ text "注意事項" ] ]
         , ul []
-            [ li [] [ text "当サイトは非公式・非公認のネタサイトです。" ]
+            [ li [] [ text "当サイトは非公式・非公認のジョークサイトです。" ]
             , li []
                 [ text "問題等ありましたら、"
                 , a [ href "https://twitter.com/guricerin" ] [ text "作者のTwitter" ]
