@@ -68,6 +68,7 @@ view model =
         [ div [] [ h2 [] [ text "ニュース一覧" ] ]
         , ul []
             [ viewNews { y = 2021, m = 1, d = 29 } Route.News__News20210129 "兎田建設と業務提携を結びました"
+            , viewNews { y = 2021, m = 1, d = 20 } Route.News__News20210120 "麺屋ぼたんクレイジー店をオープンしました"
             , viewNews { y = 2020, m = 12, d = 1 } Route.News__News20201201 "スナイパーぼたんくすを建設しました"
             , viewNews { y = 2020, m = 11, d = 7 } Route.News__News20201107 "麺屋ぼたん2号店をオープンしました"
             , viewNews { y = 2020, m = 10, d = 29 } Route.News__News20201029 "麺屋ぼたん本店をオープンしました"

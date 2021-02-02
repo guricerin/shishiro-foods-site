@@ -41,13 +41,13 @@ view { params } =
                 [ tbody []
                     [ tableItem "社名" "ししろフーズ"
                     , tableItem "資本金" "0円"
-                    , tableItem "所在地" "ホロ鯖 5期生ハウス4F"
+                    , tableItem "所在地" "ホロ鯖 5期生ビルディング 4F"
                     , tr []
                         [ th [] [ text "事業内容" ]
                         , td [] [ ol [] [ li [] [ text "ラーメン店の経営" ], li [] [ text "ホロ鯖内施設の設計・施工" ] ] ]
                         ]
                     , tableItem "代表" "CEO 獅白ぼたん"
-                    , tableItem "加盟団体・組織" "hololive production"
+                    , tableItem "加盟団体・組織" "Hololive Production"
                     , tableItem "企業理念" "「自由」"
                     ]
                 ]
