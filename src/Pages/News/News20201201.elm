@@ -70,6 +70,11 @@ view model =
             , p [] [ text "ししろフーズはホロ鯖内の秩序維持に努めて参ります。" ]
             ]
         , div []
+            [ img [ src "/assets/images/news/2020-12-01/3.jpg" ] []
+            , img [ src "/assets/images/news/2020-12-01/1.jpg" ] []
+            , img [ src "/assets/images/news/2020-12-01/2.jpg" ] []
+            ]
+        , div []
             [ YT.toHtml "bvn319UGUNY" ]
         ]
     }

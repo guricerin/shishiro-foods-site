@@ -41,10 +41,16 @@ view { params } =
                 [ div []
                     [ h3 [] [ text "麺屋ぼたん" ]
                     , p [] [ text "当社ラーメン店ブランド「麺屋ぼたん」の店舗経営。" ]
+                    , img [ src "/assets/images/menya-botan-logo.png" ] []
+                    , div []
+                        [ text "ロゴ制作："
+                        , a [ href "https://twitter.com/leptocephalus_1" ] [ text "@leptocephalus_1" ]
+                        , text " 氏"
+                        ]
                     ]
                 , div []
-                    [ h3 [] [ text "施工事業" ]
-                    , p [] [ text "" ]
+                    [ h3 [] [ text "建設事業" ]
+                    , p [] [ text "ホロ村開発・その他建設に関する事業" ]
                     ]
                 ]
             ]

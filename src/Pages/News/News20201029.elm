@@ -71,6 +71,8 @@ view model =
             , p [] [ text "皆様のご来店を心よりお待ちしております。" ]
             ]
         , div []
+            [ img [ src "/assets/images/news/2020-10-29/1.jpg" ] [] ]
+        , div []
             [ YT.toHtml "XjQhvAn4y-k" ]
         ]
     }

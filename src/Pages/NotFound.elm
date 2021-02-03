@@ -1,6 +1,7 @@
 module Pages.NotFound exposing (Model, Msg, Params, page)
 
 import Html exposing (..)
+import Html.Attributes exposing (..)
 import Spa.Document exposing (Document)
 import Spa.Page as Page exposing (Page)
 import Spa.Url exposing (Url)
@@ -34,6 +35,7 @@ view : Url Params -> Document Msg
 view { params } =
     { title = "404 | " ++ T.title
     , body =
-        [ text "Not found"
+        [ p [] [ text "404 : Page Not found" ]
+        , img [ src "/assets/images/404.jpg" ] []
         ]
     }
