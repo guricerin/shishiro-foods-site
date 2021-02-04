@@ -65,7 +65,7 @@ view : Model -> Document Msg
 view model =
     { title = "NEWS | " ++ T.title
     , body =
-        [ div [] [ h2 [] [ text "ニュース一覧" ] ]
+        [ div [ class "title" ] [ h2 [] [ text "ニュース一覧" ] ]
         , ul []
             [ viewNews { y = 2021, m = 1, d = 29 } Route.News__News20210129 "兎田建設と業務提携を結びました"
             , viewNews { y = 2021, m = 1, d = 20 } Route.News__News20210120 "麺屋ぼたんクレイジー店をオープンしました"

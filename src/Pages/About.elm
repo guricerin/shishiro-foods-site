@@ -35,16 +35,21 @@ view : Url Params -> Document Msg
 view { params } =
     { title = "ABOUT | " ++ T.title
     , body =
-        [ div [] [ h2 [] [ text "会社概要" ] ]
+        [ div [ class "title" ] [ h2 [] [ text "会社概要" ] ]
         , section []
-            [ table []
+            [ table [ class "table" ]
                 [ tbody []
                     [ tableItem "社名" "ししろフーズ"
                     , tableItem "資本金" "0円"
                     , tableItem "所在地" "ホロ鯖 5期生ビルディング 4F"
                     , tr []
-                        [ th [] [ text "事業内容" ]
-                        , td [] [ ol [] [ li [] [ text "ラーメン店の経営" ], li [] [ text "ホロ鯖内施設の設計・施工" ] ] ]
+                        [ th [ class "has-text-left" ] [ text "事業内容" ]
+                        , td []
+                            [ ul []
+                                [ li [ class "has-text-left" ] [ text "ラーメン店の経営" ]
+                                , li [ class "has-text-left" ] [ text "ホロ鯖内施設の設計・施工" ]
+                                ]
+                            ]
                         ]
                     , tableItem "代表" "CEO 獅白ぼたん"
                     , tableItem "加盟団体・組織" "Hololive Production"
@@ -58,4 +63,4 @@ view { params } =
 
 tableItem : String -> String -> Html Msg
 tableItem thstr tdstr =
-    tr [] [ th [] [ text thstr ], td [] [ text tdstr ] ]
+    tr [] [ th [ class "has-text-left" ] [ text thstr ], td [ class "has-text-left" ] [ text tdstr ] ]

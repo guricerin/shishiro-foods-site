@@ -35,7 +35,7 @@ view : Url Params -> Document Msg
 view { params } =
     { title = "CAUTION | " ++ T.title
     , body =
-        [ div [] [ h2 [] [ text "注意事項" ] ]
+        [ div [ class "title" ] [ h2 [] [ text "注意事項" ] ]
         , ul []
             [ li [] [ text "当サイトは非公式・非公認のジョークサイトです。" ]
             , li []

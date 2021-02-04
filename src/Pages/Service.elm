@@ -35,23 +35,21 @@ view : Url Params -> Document Msg
 view { params } =
     { title = "SERVICE | " ++ T.title
     , body =
-        [ div []
-            [ h2 [] [ text "事業概要" ]
-            , div []
-                [ div []
-                    [ h3 [] [ text "麺屋ぼたん" ]
-                    , p [] [ text "当社ラーメン店ブランド「麺屋ぼたん」の店舗経営。" ]
-                    , img [ src "/assets/images/menya-botan-logo.png" ] []
-                    , div []
-                        [ text "ロゴ制作："
-                        , a [ href "https://twitter.com/leptocephalus_1" ] [ text "@leptocephalus_1" ]
-                        , text " 氏"
-                        ]
-                    ]
+        [ div [ class "title" ] [ h2 [] [ text "会社概要" ] ]
+        , div []
+            [ div []
+                [ h3 [] [ text "麺屋ぼたん" ]
+                , p [] [ text "当社ラーメン店ブランド「麺屋ぼたん」の店舗経営。" ]
+                , img [ src "/assets/images/menya-botan-logo.png" ] []
                 , div []
-                    [ h3 [] [ text "建設事業" ]
-                    , p [] [ text "ホロ村開発・その他建設に関する事業" ]
+                    [ text "ロゴ制作："
+                    , a [ href "https://twitter.com/leptocephalus_1" ] [ text "@leptocephalus_1" ]
+                    , text " 氏"
                     ]
+                ]
+            , div []
+                [ h3 [] [ text "建設事業" ]
+                , p [] [ text "ホロ村開発・その他建設に関する事業" ]
                 ]
             ]
         ]

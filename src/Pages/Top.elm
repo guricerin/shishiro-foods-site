@@ -86,7 +86,7 @@ view : Model -> Document Msg
 view model =
     { title = T.title
     , body =
-        [ div [] [ h2 [] [ text "Shishiro Foods Corp." ] ]
+        [ div [ class "title" ] [ h2 [] [ text "Shishiro Foods Corp." ] ]
         , div [] [ h3 [] [ renderText model.selected ] ]
         ]
     }
