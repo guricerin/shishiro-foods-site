@@ -44,14 +44,18 @@ init flags url key =
 
 
 type Msg
-    = Toggle
+    = ToggleMenu
+    | ResetMenu
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-        Toggle ->
+        ToggleMenu ->
             ( { model | isMenuActive = not model.isMenuActive }, Cmd.none )
+
+        ResetMenu ->
+            ( { model | isMenuActive = False }, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
@@ -72,8 +76,10 @@ view { page, toMsg } model =
     , body =
         [ div [ class "sf-site-all" ]
             [ viewHeader toMsg model
-            , section [ class "sf-site-content container" ]
-                [ div [ class "" ] page.body
+            , section [ class "sf-site-content section" ]
+                [ div [ class "container" ]
+                    [ div [ class "hero" ] page.body
+                    ]
                 ]
             , viewFooter
             ]
@@ -94,10 +100,14 @@ renderModel model =
 
 viewHeader : (Msg -> msg) -> Model -> Html msg
 viewHeader toMsg model =
-    nav [ class "navbar is-black" ]
+    nav [ class "navbar is-dark" ]
         [ div [ class "container" ]
             [ div [ class "navbar-brand" ]
-                [ a [ class "navbar-item brand-text", href "/" ]
+                [ a
+                    [ class "navbar-item brand-text"
+                    , href "/"
+                    , onClick <| toMsg ResetMenu
+                    ]
                     [ img [ src "/assets/logo.svg", width 64, height 64 ] []
                     , h1 [] [ text "Shishiro Foods Corp." ]
                     ]
@@ -105,9 +115,7 @@ viewHeader toMsg model =
                     [ class "navbar-burger burger"
                     , attribute "data-target" "navMenu"
                     , renderModel model
-
-                    -- Shared.viewの呼び出し元で型を合わせてくれる
-                    , onClick <| toMsg Toggle
+                    , onClick <| toMsg ToggleMenu
                     ]
                     [ span [] []
                     , span [] []
@@ -121,23 +129,24 @@ viewHeader toMsg model =
                 ]
                 -- 画面右側にメニュー配置
                 [ div [ class "navbar-end" ]
-                    [ viewNavbarItem Route.About "About"
-                    , viewNavbarItem Route.Service "Service"
-                    , viewNavbarItem Route.News__Top "News"
-                    , viewNavbarItem Route.Caution "Caution"
+                    [ viewNavbarItem Route.About "About" toMsg
+                    , viewNavbarItem Route.Service "Service" toMsg
+                    , viewNavbarItem Route.News__Top "News" toMsg
+                    , viewNavbarItem Route.Caution "Caution" toMsg
                     ]
                 ]
             ]
         ]
 
 
-viewNavbarItem : Route.Route -> String -> Html msg
-viewNavbarItem route txt =
+viewNavbarItem : Route.Route -> String -> (Msg -> msg) -> Html msg
+viewNavbarItem route itemName toMsg =
     a
         [ class "navbar-item"
         , href (Route.toString route)
+        , onClick <| toMsg ResetMenu
         ]
-        [ text txt ]
+        [ text itemName ]
 
 
 viewFooter : Html msg
