@@ -76,9 +76,12 @@ view { page, toMsg } model =
     , body =
         [ div [ class "sf-site-all" ]
             [ viewHeader toMsg model
-            , section [ class "sf-site-content section" ]
-                [ div [ class "container" ]
-                    [ div [ class "hero" ] page.body
+            , section [ class "sf-site-content" ]
+                [ div [ class "section" ]
+                    [ div [ class "container" ]
+                        [ div [ class "columns is-centerd is-mobile" ]
+                            [ div [ class "column " ] page.body ]
+                        ]
                     ]
                 ]
             , viewFooter
@@ -129,9 +132,9 @@ viewHeader toMsg model =
                 ]
                 -- 画面右側にメニュー配置
                 [ div [ class "navbar-end" ]
-                    [ viewNavbarItem Route.About "About" toMsg
+                    [ viewNavbarItem Route.News__Top "News" toMsg
+                    , viewNavbarItem Route.About "About" toMsg
                     , viewNavbarItem Route.Service "Service" toMsg
-                    , viewNavbarItem Route.News__Top "News" toMsg
                     , viewNavbarItem Route.Caution "Caution" toMsg
                     ]
                 ]
@@ -151,7 +154,21 @@ viewNavbarItem route itemName toMsg =
 
 viewFooter : Html msg
 viewFooter =
-    footer [ class "footer has-text-centered" ]
-        [ a [ class "link", href "https://twitter.com/shishirobotan" ] [ text "Twitter" ]
-        , a [ class "link", href "https://www.youtube.com/channel/UCUKD-uaobj9jiqB-VXt71mA" ] [ text "Youtube" ]
+    footer [ class "footer level" ]
+        [ div [ class "level-item" ]
+            [ a
+                [ href "https://twitter.com/shishirobotan"
+                , target "_blank"
+                , rel "noopener noreferrer"
+                ]
+                [ img [ src "/assets/icons/twitter-icon.svg", width 32, height 32 ] [] ]
+            ]
+        , div [ class "level-item" ]
+            [ a
+                [ href "https://www.youtube.com/channel/UCUKD-uaobj9jiqB-VXt71mA"
+                , target "_blank"
+                , rel "noopener noreferrer"
+                ]
+                [ img [ src "/assets/icons/play-icon.svg", width 32, height 32 ] [] ]
+            ]
         ]
