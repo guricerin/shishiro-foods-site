@@ -154,14 +154,16 @@ viewNavbarItem route itemName toMsg =
 
 viewFooter : Html msg
 viewFooter =
-    footer [ class "footer level" ]
-        [ div [ class "level-item" ]
+    footer [ class "footer level is-mobile" ]
+        -- アイコンを水平方向に中央寄せしたい
+        [ div [ class "level-item" ] []
+        , div [ class "level-item" ]
             [ a
                 [ href "https://twitter.com/shishirobotan"
                 , target "_blank"
                 , rel "noopener noreferrer"
                 ]
-                [ img [ src "/assets/icons/twitter-icon.svg", width 32, height 32 ] [] ]
+                [ img [ src "/assets/icons/twitter-brands.svg", width 32, height 32 ] [] ]
             ]
         , div [ class "level-item" ]
             [ a
@@ -169,6 +171,7 @@ viewFooter =
                 , target "_blank"
                 , rel "noopener noreferrer"
                 ]
-                [ img [ src "/assets/icons/play-icon.svg", width 32, height 32 ] [] ]
+                [ img [ src "/assets/icons/youtube-brands.svg", width 32, height 32 ] [] ]
             ]
+        , div [ class "level-item" ] []
         ]

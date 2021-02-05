@@ -64,10 +64,15 @@ view : Model -> Document Msg
 view model =
     { title = "2021-01-29 | " ++ T.title
     , body =
-        [ div [] []
+        [ div
+            [ class "title"
+            ]
+            [ h2 [] [ text "2021年01月29日" ]
+            ]
         , div []
             [ p [] [ text "ししろフーズは兎田建設（CEO：兎田ぺこら）との間で業務提携を結びました。" ]
             , p [] [ text "これを機に、弊社ブランド「麺屋ぼたん」のチェーン展開をホロ鯖内にてより一層推進して参ります。" ]
+            , br [] []
             ]
         , div []
             [ img [ src "/assets/images/news/2021-01-29/1.jpg" ] []

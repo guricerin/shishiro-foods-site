@@ -65,10 +65,15 @@ view : Model -> Document Msg
 view model =
     { title = "2021-01-20 | " ++ T.title
     , body =
-        [ div [] []
+        [ div
+            [ class "title"
+            ]
+            [ h2 [] [ text "2021年01月20日" ]
+            ]
         , div []
             [ p [] [ text "ホロライブID2期生 Kureiji Ollie 氏の自宅周辺を改造し、「麺屋ぼたん」クレイジー店をオープンしました。" ]
             , p [] [ text "当店舗限定のゾンビ肉などの素材を活かしたラーメンを提供いたします。" ]
+            , br [] []
             ]
         , div []
             [ img [ src "/assets/images/news/2021-01-20/1.jpg" ] []

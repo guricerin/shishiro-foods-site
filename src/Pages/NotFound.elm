@@ -35,7 +35,7 @@ view : Url Params -> Document Msg
 view { params } =
     { title = "404 | " ++ T.title
     , body =
-        [ p [] [ text "404 : Page Not found" ]
+        [ p [ class "subtitle" ] [ text "404 : Page Not found" ]
         , img [ src "/assets/images/404.jpg" ] []
         ]
     }

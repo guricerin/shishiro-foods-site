@@ -64,15 +64,20 @@ view : Model -> Document Msg
 view model =
     { title = "2020-12-01 | " ++ T.title
     , body =
-        [ div [] []
-        , div []
-            [ p [] [ text "ホロ鯖5期生ハウス前にて、弊社代表の傭兵時代を模したスフィンクス「スナイパーぼたんくす」を建築しました。" ]
-            , p [] [ text "ししろフーズはホロ鯖内の秩序維持に努めて参ります。" ]
+        [ div
+            [ class "title"
+            ]
+            [ h2 [] [ text "2020年12月01日" ]
             ]
         , div []
-            [ img [ src "/assets/images/news/2020-12-01/3.jpg" ] []
-            , img [ src "/assets/images/news/2020-12-01/1.jpg" ] []
+            [ p [] [ text "ホロ鯖5期生ビルディング前にて、弊社代表の傭兵時代を模した「スナイパーぼたんクス」を建築しました。" ]
+            , p [] [ text "ししろフーズはホロ鯖内の秩序維持に努めて参ります。" ]
+            , br [] []
+            ]
+        , div []
+            [ img [ src "/assets/images/news/2020-12-01/1.jpg" ] []
             , img [ src "/assets/images/news/2020-12-01/2.jpg" ] []
+            , img [ src "/assets/images/news/2020-12-01/3.jpg" ] []
             ]
         , div []
             [ YT.toHtml "bvn319UGUNY" ]

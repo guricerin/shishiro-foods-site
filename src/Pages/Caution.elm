@@ -36,16 +36,28 @@ view { params } =
     { title = "CAUTION | " ++ T.title
     , body =
         [ div [ class "title" ] [ h2 [] [ text "注意事項" ] ]
-        , ul []
-            [ li [] [ text "当サイトは非公式・非公認のジョークサイトです。" ]
-            , li []
-                [ text "問題等ありましたら、"
-                , a [ href "https://twitter.com/guricerin" ] [ text "作者のTwitter" ]
-                , text "にお知らせ頂くか"
-                , a [ href "https://github.com/guricerin/test" ] [ text "GitHubリポジトリ" ]
-                , text "にてIssueの発行をお願い致します。"
+        , div [ class "content" ]
+            [ ul []
+                [ li [] [ text "当サイトは非公式・非公認のジョークサイトです。" ]
+                , li []
+                    [ text "問題等ありましたら、"
+                    , a
+                        [ href "https://twitter.com/guricerin"
+                        , target "_blank"
+                        , rel "noopener noreferrer"
+                        ]
+                        [ text "制作者のTwitter" ]
+                    , text "にお知らせ頂くか"
+                    , a
+                        [ href "https://github.com/guricerin/shishiro-foods-site"
+                        , target "_blank"
+                        , rel "noopener noreferrer"
+                        ]
+                        [ text "GitHubリポジトリ" ]
+                    , text "にてIssueの発行をお願い致します。"
+                    ]
+                , li [] [ text "当サイトは予告なく削除する場合があります。" ]
                 ]
-            , li [] [ text "当サイトは予告なく削除する場合があります。" ]
             ]
         ]
     }

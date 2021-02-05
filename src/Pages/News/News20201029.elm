@@ -65,10 +65,15 @@ view : Model -> Document Msg
 view model =
     { title = "2020-10-29 | " ++ T.title
     , body =
-        [ div [] []
+        [ div
+            [ class "title"
+            ]
+            [ h2 [] [ text "2020年10月29日" ]
+            ]
         , div []
             [ p [] [ text "ホロ鯖5期生ビルディング4F（弊社代表の自宅）にて「麺屋ぼたん」をオープンしました。" ]
             , p [] [ text "皆様のご来店を心よりお待ちしております。" ]
+            , br [] []
             ]
         , div []
             [ img [ src "/assets/images/news/2020-10-29/1.jpg" ] [] ]

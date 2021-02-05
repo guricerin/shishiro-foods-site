@@ -53,7 +53,12 @@ view { params } =
                             , img [ src "/assets/images/menya-botan-logo.png" ] []
                             , div []
                                 [ text "ロゴ制作："
-                                , a [ href "https://twitter.com/leptocephalus_1" ] [ text "@leptocephalus_1" ]
+                                , a
+                                    [ href "https://twitter.com/leptocephalus_1"
+                                    , target "_blank"
+                                    , rel "noopener noreferrer"
+                                    ]
+                                    [ text "@leptocephalus_1" ]
                                 , text " 氏"
                                 ]
                             ]

@@ -44,6 +44,7 @@ words =
     , "おはようから\u{3000}おやすみまで\u{3000}暮らしを\u{3000}見つめているぞ"
     , "ららららー\u{3000}ららららー\u{3000}ららららライオン"
     , "コンゴトモヨロシク......"
+    , "カートで来た"
     ]
         |> Array.fromList
 
@@ -91,6 +92,7 @@ view model =
             ]
             [ h2 [] [ text "Shishiro Foods Corp." ]
             ]
+        , img [ src "/assets/images/home.jpg" ] []
         , div [] [ h3 [] [ renderText model.selected ] ]
         ]
     }

@@ -62,18 +62,25 @@ subscriptions model =
 
 view : Model -> Document Msg
 view model =
-    { title = "2020-10-29 | " ++ T.title
+    { title = "2020-11-07 | " ++ T.title
     , body =
-        [ div [] []
+        [ div
+            [ class "title"
+            ]
+            [ h2 [] [ text "2020年11月07日" ]
+            ]
         , div []
             [ p [] [ text "ホロ鯖秋の大運動会場前にて「麺屋ぼたん」2号店をオープンしました。" ]
+            , br [] []
             ]
         , div []
             [ img [ src "/assets/images/news/2020-11-07/1.jpg" ] [] ]
         , div []
-            [ p [] [ h3 [] [ text "追記：" ] ]
+            [ br [] []
+            , p [] [ h3 [] [ text "追記：" ] ]
             , p [] [ text "開店してすぐ、ホロライブ所属のときのそら様にご来店頂きました。" ]
             , p [] [ text "心より御礼申し上げます。" ]
+            , br [] []
             ]
         , div []
             [ img [ src "/assets/images/news/2020-11-07/2.jpg" ] [] ]
