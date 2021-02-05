@@ -82,7 +82,7 @@ view model =
             , img [ src "/assets/images/news/2021-01-20/4.jpg" ] []
             ]
         , br [] []
-        , div []
+        , div [ class "video" ]
             [ YT.toHtml "BKGQBHrgvgI" ]
         ]
     }

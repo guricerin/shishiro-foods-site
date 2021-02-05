@@ -80,7 +80,7 @@ view model =
             , img [ src "/assets/images/news/2020-12-01/3.jpg" ] []
             ]
         , br [] []
-        , div []
+        , div [ class "video" ]
             [ YT.toHtml "bvn319UGUNY" ]
         ]
     }

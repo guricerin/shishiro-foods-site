@@ -80,7 +80,10 @@ view { page, toMsg } model =
                 [ div [ class "section" ]
                     [ div [ class "container" ]
                         [ div [ class "columns is-centered is-mobile" ]
-                            [ div [ class "column is-half" ] page.body ]
+                            [ div [ class "column" ] []
+                            , div [ class "column is-10" ] page.body
+                            , div [ class "column" ] []
+                            ]
                         ]
                     ]
                 ]
