@@ -79,6 +79,7 @@ view model =
             , img [ src "/assets/images/news/2021-01-29/2.jpg" ] []
             , img [ src "/assets/images/news/2021-01-29/3.jpg" ] []
             ]
+        , br [] []
         , div []
             [ YT.toHtml "egTpXCr0p9E" ]
         ]

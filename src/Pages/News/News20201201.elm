@@ -79,6 +79,7 @@ view model =
             , img [ src "/assets/images/news/2020-12-01/2.jpg" ] []
             , img [ src "/assets/images/news/2020-12-01/3.jpg" ] []
             ]
+        , br [] []
         , div []
             [ YT.toHtml "bvn319UGUNY" ]
         ]

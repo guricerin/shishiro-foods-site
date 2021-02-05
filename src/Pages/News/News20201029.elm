@@ -77,6 +77,7 @@ view model =
             ]
         , div []
             [ img [ src "/assets/images/news/2020-10-29/1.jpg" ] [] ]
+        , br [] []
         , div []
             [ YT.toHtml "XjQhvAn4y-k" ]
         ]

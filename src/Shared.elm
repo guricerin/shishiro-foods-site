@@ -135,6 +135,7 @@ viewHeader toMsg model =
                     [ viewNavbarItem Route.News__Top "News" toMsg
                     , viewNavbarItem Route.About "About" toMsg
                     , viewNavbarItem Route.Service "Service" toMsg
+                    , viewNavbarItem Route.Recruit "Recruit" toMsg
                     , viewNavbarItem Route.Caution "Caution" toMsg
                     ]
                 ]

@@ -84,6 +84,7 @@ view model =
             ]
         , div []
             [ img [ src "/assets/images/news/2020-11-07/2.jpg" ] [] ]
+        , br [] []
         , div []
             [ YT.toHtml "6jIev25HdPU" ]
         ]
